@@ -20,6 +20,7 @@ public interface WorkspaceUserRepository extends JpaRepository<WorkspaceUser, UU
     @Transactional
     @Modifying
     void deleteByWorkspaceIdAndUserId(Long workspace_id, UUID user_id);
+    WorkspaceUser findByUserId(UUID id);
 
 
 }
